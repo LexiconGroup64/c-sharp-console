@@ -1,10 +1,14 @@
 ﻿using _2_Objects.Models;
 
-Console.WriteLine("Hello, World!");
+PetrolStation station = new PetrolStation();
+station.WriteToConsole("Side effect");
+
+station.WriteToConsole("Side effect", " are sometimes okay");
+
+station.
 
 Account newAccount = new Account();
 
-newAccount.id = 78;
 
 int id = newAccount.GetId();
 
