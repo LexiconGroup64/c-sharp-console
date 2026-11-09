@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="1-Console/1-Console.csproj" />
   <Project Path="2-Objects/2-Objects.csproj" />
+  <Project Path="3-Flow/3-Flow.csproj" />
 </Solution>

@@ -5,10 +5,15 @@ station.WriteToConsole("Side effect");
 
 station.WriteToConsole("Side effect", " are sometimes okay");
 
-station.
+
 
 Account newAccount = new Account();
 
+Store newStore = new Store(530, 45, "Store");
+
+Store alteredStore = new Store(607, newStore.Capacity, newStore.Name);
+
+Location location = new Location(40, "Oligarchy");
 
 int id = newAccount.GetId();
 
