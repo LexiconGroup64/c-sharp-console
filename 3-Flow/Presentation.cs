@@ -68,4 +68,52 @@ public class Presentation
         formattedText.TrimStart();
         return formattedText;
     }
+
+    public static void Menu()
+    {
+        bool continueExecution = false;
+        while (continueExecution)
+        {
+            string choice = Console.ReadKey().Key.ToString().ToUpper();
+
+            switch (choice)
+            {
+                case "Q":
+                    Console.WriteLine("You tapped Q");
+                    continueExecution = false;
+                    break;
+                case "A":
+                    Console.WriteLine("You tapped A");
+                    break;
+                case "B":
+                    Console.WriteLine("You tapped B");
+                    break;
+                case "C":
+                    Console.WriteLine("You tapped C");
+                    break;
+                default:
+                    Console.WriteLine("You tapped something else");
+                    break;
+            }
+      
+        }
+
+        
+    }
+    
+    public static int BetterMenu()
+    {
+            string choice = Console.ReadKey().Key.ToString().ToUpper();
+            Console.WriteLine("Tap Q for quit");
+            Console.WriteLine("A for Edit");
+
+            return choice switch
+            {
+                "Q" => -1,
+                "A" => 1,
+                "B" => 2,
+                "C" => 3,
+                _ => 4
+            };
+    }
 }
