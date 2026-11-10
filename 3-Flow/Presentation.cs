@@ -44,4 +44,28 @@ public class Presentation
             }
         }
     }
+
+    public static string CapitalizeFirstLine(string text)
+    {
+        string[] words = text.Split(" ");
+        List<string> newWords = text.Split(" ").ToList();
+        newWords.Add("The last sentence.");
+        words = newWords.ToArray();
+        
+        
+        string formattedText = "";
+        int textLength = 0;
+        for (int i = 0; i < words.Length; i++)
+        {
+            if (textLength < 60)
+            {
+                words[i] = words[i].ToUpper();
+            }
+
+            textLength = textLength + words[i].Length + 1;
+            formattedText = formattedText + " " + words[i];
+        }
+        formattedText.TrimStart();
+        return formattedText;
+    }
 }
