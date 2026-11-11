@@ -2,6 +2,10 @@
 
 using _3_Flow;
 
+Calculation.MathExample();
+
+Console.ReadLine();
+
 Mastermind game = new Mastermind();
 game.Run();
 Console.ReadLine();
