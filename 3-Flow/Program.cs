@@ -2,6 +2,10 @@
 
 using _3_Flow;
 
+Mastermind game = new Mastermind();
+game.Run();
+Console.ReadLine();
+
 string snippet =
     "The Array class is not part of the System.Collections namespaces. However, it is still considered a collection because it is based on the IList interface.\n\nThe Array class is the base class for language implementations that support arrays. However, only the system and compilers can derive explicitly from the Array class. Users should employ the array constructs provided by the language.\n\nAn element is a value in an Array. The length of an Array is the total number of elements it can contain. The lower bound of an Array is the index of its first element. An Array can have any lower bound, but it has a lower bound of zero by default. A different lower bound can be defined when creating an instance of the Array class using CreateInstance. A multidimensional Array can have different bounds for each dimension. An array can have a maximum of 32 dimensions.";
 
