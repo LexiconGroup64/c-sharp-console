@@ -2,6 +2,11 @@
 
 using _3_Flow;
 
+
+Booking booking = new();
+booking.PrintDayType();
+
+
 Calculation.MathExample();
 
 Console.ReadLine();

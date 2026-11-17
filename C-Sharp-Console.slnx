@@ -2,4 +2,5 @@
   <Project Path="1-Console/1-Console.csproj" />
   <Project Path="2-Objects/2-Objects.csproj" />
   <Project Path="3-Flow/3-Flow.csproj" />
+  <Project Path="4-Inheritance/4-Inheritance.csproj" />
 </Solution>

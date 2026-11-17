@@ -14,10 +14,8 @@ public class Store
         Capacity = capacity;
     }
     
-    public Store (int storeCapacity, int capacity, string name) 
+    public Store (int storeCapacity, int capacity, string name)
     {
-        StoreCapacity = storeCapacity;
-        Capacity = capacity;
-        Name = name;
+        (StoreCapacity, Capacity, Name) = (storeCapacity, capacity, name);
     }
 }
