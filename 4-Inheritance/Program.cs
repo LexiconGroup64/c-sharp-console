@@ -6,14 +6,13 @@ Subscription subscriptionG = new ProSubscription();
 
 Console.WriteLine((subscriptionG as ProSubscription).SupportHours);
 
-Console.Read();
 
 ProSubscription subscriptionA = new ProSubscription();
 ProSubscription subscriptionB = new ProSubscription();
 ProSubscription subscriptionC = new ProSubscription();
-Subscription subscriptionD = new Subscription();
-Subscription subscriptionE = new Subscription();
-Subscription subscriptionF = new Subscription();
+Subscription subscriptionD = new BasicSubscription();
+Subscription subscriptionE = new BasicSubscription();
+Subscription subscriptionF = new BasicSubscription();
 
 subscriptionB.SupportHours = 20;
 

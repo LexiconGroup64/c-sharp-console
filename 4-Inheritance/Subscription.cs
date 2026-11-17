@@ -1,6 +1,6 @@
 namespace _4_Inheritance;
 
-public class Subscription
+public abstract class Subscription
 {
     public DateTime TermEndDate { get; set; }
     public decimal Discount { get; private set; }
@@ -29,6 +29,8 @@ public class Subscription
         return true;
     }
 
+    public abstract decimal Refund(int daysLeft);
+    
     private void StartTrial()
     {
         TermEndDate = new DateTime().AddMonths(13);

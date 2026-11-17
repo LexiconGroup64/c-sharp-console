@@ -12,5 +12,8 @@ public class ProSubscription : Subscription
     {
     }
     
-    
+    public override decimal Refund(int daysLeft)
+    {
+        throw new NotImplementedException();
+    }
 }
