@@ -2,6 +2,82 @@
 
 using _4_Inheritance;
 
+List<Address> addresses = new List<Address>()
+{
+    new Address(1, "Hornsgatan", "Flen"),
+    new Address(2, "Grevegatan", "Alingsås"),
+    new Address(3, "Alpvägen", "Hög"),
+    new Address(3, "Alpvägen", "Hög"),
+    new Address(4, "Lindblomsgatan", "Gråbo")
+};
+
+List<Address> newAddresses = addresses
+    .Where(a => a.Id > 1)
+    .OrderBy(a => a.City)
+    .DistinctBy(a => a.Id)
+    .ToList();
+
+foreach (var address in newAddresses)
+{
+    Console.WriteLine($"{address.Id}, {address.Street}, {address.City}" );
+}
+
+Console.Read();
+
+
+
+List<Location> locations = addresses
+    .Select(a => new Location(a.Id, a.Street, a.City))
+    .ToList();
+
+
+List<string> addressesTransformed = addresses
+    .Select(a => a.Street + "12")
+    .ToList();
+
+foreach (var address in addressesTransformed)
+{
+    Console.WriteLine(address);
+}
+
+
+Console.Read();
+
+
+int[] numbers = [45, 33, 93, 557, 210, 834];
+
+double yetMoreNumbers = numbers
+    .Max();
+
+Console.WriteLine(yetMoreNumbers);
+
+List<string> newNumbers = numbers
+    .Where(item => item > 50 && item < 700)
+    .Select(item => "12:" + item)
+    .Order()
+    .ToList();
+
+int amount = newNumbers.Count();
+
+foreach (string num in newNumbers)
+{
+    Console.WriteLine(num);
+}
+
+Console.Read();
+
+
+LifeInsurance altInsurance = new LifeInsurance();
+IInsurance insurance = new LifeInsurance();
+altInsurance.ChangeData(89);
+insurance.ChangeData(89);
+
+
+Console.WriteLine(insurance.GetType());
+Console.WriteLine(insurance is LifeInsurance);
+
+Console.Read();
+
 Subscription subscriptionG = new ProSubscription();
 
 Console.WriteLine((subscriptionG as ProSubscription).SupportHours);
