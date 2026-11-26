@@ -2,6 +2,21 @@
 
 using _3_Flow;
 
+Name person = new Name("Olav", "Hegger");
+Console.WriteLine(person.FirstName);
+
+Circle circle = new Circle(38);
+
+Name newPerson = person;
+
+Circle newCircle = circle;
+
+
+Console.WriteLine(newCircle.Radius);
+
+
+
+Console.Read();
 
 Booking booking = new();
 booking.PrintDayType();
