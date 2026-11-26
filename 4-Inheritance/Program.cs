@@ -2,6 +2,47 @@
 
 using _4_Inheritance;
 
+try
+{
+    LifeInsurance newInsurance = new LifeInsurance();
+    newInsurance.SignUp();
+}
+catch
+{
+    Console.WriteLine("Wrong age");
+}
+
+
+
+bool valueOkay = false;
+while (valueOkay == false)
+{
+    string userValue = Console.ReadLine();
+    try
+    {
+        valueOkay = true;
+        int theNumber = Int16.Parse(userValue);
+    }
+    catch (FormatException ex)
+    {
+        Console.WriteLine("You have to enter a number");
+        valueOkay = false;
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine(ex.Message);
+        Console.WriteLine(ex.StackTrace);
+        valueOkay = false;
+    }
+    finally
+    {
+
+    }
+    
+}
+
+
+
 List<Address> addresses = new List<Address>()
 {
     new Address(1, "Hornsgatan", "Flen"),
